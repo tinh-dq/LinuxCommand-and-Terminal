@@ -1,0 +1,17 @@
+### man
+Tra cứu lệnh
+
+vd: man tail
+
+### wget
+
+tải xuống file từ đường dẫn
+
+### apt
+Advanced Packaging Tool, hay APT, là phần mềm miễn phí dùng để quản lý việc cài đặt phần mềm trên Linux.
+APT làm đơn giản các thủ tục quản lý phần mềm trên các máy tính tựa Unix bằng cách tự động hóa việc tải về,
+cấu hình và cài đặt các gói phần mềm, cả ở dạng biên dịch sẵn (dạng binary) hoặc biên dịch mã nguồn.
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install nodejs
