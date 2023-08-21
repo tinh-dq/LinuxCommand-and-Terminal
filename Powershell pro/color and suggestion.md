@@ -13,18 +13,25 @@ Link:
 - Tác giả recommend dùng font [Meslo LGM NF](https://github.com/kalaschnik/meslolgs-nf-template)
 - Một số dev dùng icon khác có chứa icon của Nerd Font như [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip)
 
+## Step 1: Cài đặt modules
+- Tổng hợp CMD:
 ```
-# C:\Users\Admin\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+winget install JanDeDobbeleer.OhMyPosh -s winget
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/amro.omp.json" | Invoke-Expression
+oh-my-posh font install
 
-# color UI
-# add `Meslo LGM NF Font`, in VSCode Setting -> go to File -> Preferences -> Settings, in Windows Terminal: Settings -> ... -> font face: `Meslo LGM NF Font`
-# search for @feature:terminal font -> fill: Meslo LGM NF
-oh-my-posh init pwsh --config 'C:\Users\QT-PC\AppData\Local\Programs\oh-my-posh\themes\powerlevel10k_rainbow.omp.json' | Invoke-Expression
+Install-Module -Name PowerShellGet -AllowPrerelease -Force
+Install-Module PSReadLine -AllowPrerelease -Force
+Install-Module -Name Terminal-Icons -Repository PSGallery
+```
 
-# Terminal-Icons Github: Icon
+## Step 2: Tạo file PROFILE thông qua VSCode:
+- `code $PROFILE`
+- Copy code sau đây rồi lưu lại
+
+```
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/amro.omp.json" | Invoke-Expression
 Import-Module Terminal-Icons
-
-# PSReadLine Github: Suggestion
 Import-Module PSReadLine
 Set-PSReadLineOption -EditMode Windows
 Set-PSReadLineOption -PredictionViewStyle ListView
