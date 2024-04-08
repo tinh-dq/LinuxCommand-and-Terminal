@@ -20,9 +20,9 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/amro.omp.json" | Invoke-Expression
 oh-my-posh font install
 
-Install-Module -Name PowerShellGet -AllowPrerelease -Force
-Install-Module PSReadLine -AllowPrerelease -Force
-Install-Module -Name Terminal-Icons -Repository PSGallery
+Install-Module PowerShellGet -Force
+Install-Module PSReadLine -Force
+Install-Module Terminal-Icons -Repository PSGallery -Force
 ```
 
 ## Step 2: Tạo file PROFILE thông qua VSCode:
