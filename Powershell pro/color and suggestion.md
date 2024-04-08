@@ -14,7 +14,7 @@ Link:
 - Một số dev dùng icon khác có chứa icon của Nerd Font như [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip)
 
 ## Step 1: Cài đặt modules
-- Tổng hợp CMD:
+- Tổng hợp CMD (Admin):
 ```
 winget install JanDeDobbeleer.OhMyPosh -s winget
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/amro.omp.json" | Invoke-Expression
@@ -23,6 +23,7 @@ oh-my-posh font install
 Install-Module PowerShellGet -Force
 Install-Module PSReadLine -Force
 Install-Module Terminal-Icons -Repository PSGallery -Force
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 ## Step 2: Tạo file PROFILE thông qua VSCode:
