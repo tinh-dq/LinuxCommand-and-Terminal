@@ -14,13 +14,16 @@ Link:
 - Một số dev dùng icon khác có chứa icon của Nerd Font như [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip)
 
 ## Step 1: Cài đặt modules
-- Tổng hợp CMD (Admin):
+- Tổng hợp CMD cho Powershell (Run as administrator):
 ```
-winget install JanDeDobbeleer.OhMyPosh -s winget
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/amro.omp.json" | Invoke-Expression
 oh-my-posh font install
 
 Install-Module PowerShellGet -Force
+```
+Restart and Run as administrator, Run command:
+```
 Install-Module PSReadLine -Force
 Install-Module Terminal-Icons -Repository PSGallery -Force
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
